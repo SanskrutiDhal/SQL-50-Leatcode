@@ -1,0 +1,6 @@
+Leatcode Question Link: https://leetcode.com/problems/product-sales-analysis-i/?envType=study-plan-v2&envId=top-sql-50
+
+SELECT Product.product_name, Sales.year, Sales.price
+FROM Product
+RIGHT JOIN Sales
+ON Sales.product_id = Product.product_id;
