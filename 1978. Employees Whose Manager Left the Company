@@ -1,0 +1,11 @@
+Leatcode Question Link: https://leetcode.com/problems/employees-whose-manager-left-the-company/description/?envType=study-plan-v2&envId=top-sql-50
+
+# Write your MySQL query statement below
+SELECT Emp.employee_id
+FROM Employees AS Emp
+LEFT JOIN Employees AS Mang
+ON Emp.manager_id = Mang.employee_id
+WHERE Emp.salary < 30000
+AND Emp.manager_id IS NOT NULL
+AND Mang.employee_id IS NULL
+ORDER BY employee_id;
