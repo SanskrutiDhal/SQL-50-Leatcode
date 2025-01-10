@@ -1,0 +1,8 @@
+Leatcode Question Link: https://leetcode.com/problems/list-the-products-ordered-in-a-period/description/?envType=study-plan-v2&envId=top-sql-50
+
+# Write your MySQL query statement below
+SELECT Products.product_name, SUM(Orders.unit) AS unit
+FROM Products NATURAL JOIN Orders
+WHERE YEAR(Orders.order_date) = 2020 AND MONTH(Orders.order_date) = 2
+GROUP BY product_id
+HAVING SUM(Orders.unit)>=100
